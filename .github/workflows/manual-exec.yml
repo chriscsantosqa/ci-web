@@ -1,0 +1,26 @@
+name: "Atividade CI/CD"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ["ubuntu-latest"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Yarn
+        run: npm install -h yarn
+
+      - name: Install Yarn
+        run: npm install -h yarn
+
+      - name: Install Dependecies
+        run: yarn
+
+      - name: Install Cypress
+        run: yarn cypress install
+
+      - name: Tests
+        run: yarn run test
