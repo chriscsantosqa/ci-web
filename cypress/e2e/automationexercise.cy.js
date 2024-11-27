@@ -64,7 +64,7 @@ describe("Automation Exercise Test Automation", () => {
     contactUs.contactUsForm(baseUrl);
     cy.get(".status").should(
       "have.text",
-      "Success! Your details have been submitted successfully."
+      "Success! Your details have been submitted successfully.",
     );
   });
   it("Test Case 8 : Verify All Products and product detail page", () => {

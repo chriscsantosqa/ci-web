@@ -20,7 +20,7 @@ jobs:
         run: yarn add cypress
 
       - name: Padronizacao de codigo
-        run: yarn lint
+        run: yarn lint --write
 
       - name: Tests
         run: yarn run test
