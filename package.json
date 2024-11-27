@@ -4,7 +4,8 @@
   "description": "Automação Web PGTAS",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress run",
+    "lint": "prettier --check ."
   },
   "keywords": [],
   "author": "Chris C. Santos",
