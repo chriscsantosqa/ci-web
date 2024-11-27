@@ -5,8 +5,8 @@
   "main": "cypress.config.js",
   "scripts": {
     "test": "npx cypress run",
-    "lint:check": "prettier --check .",
-    "lint:write": "prettier --write ."
+    "lint:check": "npx prettier --check .",
+    "lint:write": "npx prettier --write ."
   },
   "keywords": [],
   "author": "Chris C. Santos",
