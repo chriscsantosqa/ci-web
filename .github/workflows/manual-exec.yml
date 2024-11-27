@@ -4,14 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  tests:
+  web-tests:
     runs-on: ["ubuntu-latest"]
 
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install Yarn
-        run: npm install -h yarn
 
       - name: Install Yarn
         run: npm install -h yarn
@@ -22,5 +19,19 @@ jobs:
       - name: Install Cypress
         run: yarn add cypress
 
+      - name: Padronizacao de codigo
+        run: yarn lint
+
       - name: Tests
         run: yarn run test
+
+      - name: Generate Mochawesome Report
+        run: |
+          npx mochawesome-merge cypress/reports/*.json > mochawesome-report.json
+          npx mochawesome-report-generator mochawesome-report.json --reportDir cypress/reports --quiet
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@4
+        with:
+          name: mochawesome-report
+          path: ./results
