@@ -5,13 +5,15 @@
   "main": "cypress.config.js",
   "scripts": {
     "test": "npx cypress run",
-    "lint": "prettier --check ."
+    "lint:check": "prettier --check .",
+    "lint:write": "prettier --write ."
   },
   "keywords": [],
   "author": "Chris C. Santos",
   "license": "ISC",
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "prettier": "^10.9.0"
   }
 }
