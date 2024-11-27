@@ -31,7 +31,7 @@ jobs:
           npx mochawesome-report-generator mochawesome-report.json --reportDir cypress/reports --quiet
 
       - name: Upload Test Report
-        uses: actions/upload-artifact@4
+        uses: actions/upload-artifact@v4
         with:
           name: mochawesome-report
           path: ./results
